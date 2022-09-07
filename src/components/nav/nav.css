@@ -1,0 +1,28 @@
+nav {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--primary-white);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+}
+ 
+.nav-avatar {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.search-input{
+
+  width:40rem;
+}
+
+.site-title{
+  color: var(--primary-color);
+  cursor: pointer;
+}

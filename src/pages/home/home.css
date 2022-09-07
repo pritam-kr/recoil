@@ -1,0 +1,6 @@
+.home-wrapper{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 1rem;
+    padding: 1rem;
+}
