@@ -1,6 +1,22 @@
-.home-wrapper{
-    display: grid;
-    grid-template-columns: 25% 75%;
-    gap: 1rem;
-    padding: 1rem;
+.home-wrapper {
+  display: grid;
+  grid-template-columns: 20% auto;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.sidebar,
+.main-bar {
+  padding: 0.5rem;
+}
+.notes-container {
+  /* border-top: 1px solid var(--border-color); */
+  margin: 1rem 0;
+}
+.notes-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: .5rem;
 }

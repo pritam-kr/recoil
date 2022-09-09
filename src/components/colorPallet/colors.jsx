@@ -2,9 +2,10 @@ import React from "react";
 import { colors } from "../../utils";
 import "./colors.css";
 
-const Colors = ({ setFormData }) => {
+const Colors = ({ setFormData , showColorPalette}) => {
   const colorHandler = (color) => {
     setFormData((prevData) => ({ ...prevData, color: color }));
+    showColorPalette(false)
   };
 
   return (

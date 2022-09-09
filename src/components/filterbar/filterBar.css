@@ -1,0 +1,43 @@
+.filter-wrapper{
+    border: 1px solid var(--border-color);
+  
+    background-color: var(--primary-white);
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.filter-right-side{
+    display: flex;
+    gap: .5rem;
+}
+ 
+.notes-color{
+    position: relative;
+}
+
+.filter-color-palette{
+    position: absolute;
+  top: 4.2rem;
+  right: -8rem;
+  z-index: 99;
+}
+
+.filter-latest-old{
+    width: 10rem;
+    border: 1px solid var(--border-color);
+    padding: .5rem 1rem;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+
+.filter-latest-old option{
+    font-size: 1.3rem;
+     cursor: pointer;
+}
+

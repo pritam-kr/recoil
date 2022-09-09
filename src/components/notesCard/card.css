@@ -1,0 +1,7 @@
+.grid-card{
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    width: 30rem;
+    background-color: var(--primary-white);
+}
