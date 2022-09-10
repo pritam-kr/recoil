@@ -1,4 +1,4 @@
-import { atom } from "recoil";
+import { atom} from "recoil";
 
 export const allNoteAtom = atom({
     key: "allNoteAtom",
@@ -12,3 +12,5 @@ export const loadingStatusAtom = atom({
         error: ''
     }
 })
+
+ 

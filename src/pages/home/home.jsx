@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./home.css";
 import { FilterBar, GridCard, Main, Sidebar } from "../../components";
 import { getNoteService } from "../../services/getNotes";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, } from "recoil";
 import { loadingStatusAtom, allNoteAtom } from "../../recoil/atoms/allNoteAtom";
 
 const Home = () => {
@@ -29,6 +29,12 @@ const Home = () => {
     })();
   }, []);
 
+const sorting = (key) => {
+
+  console.log(key);
+
+}
+
   return (
     <section className="container">
       <div className="wrapper home-wrapper">
@@ -40,7 +46,7 @@ const Home = () => {
 
           <div className="notes-container">
             <header className="notes-container-header">
-              <FilterBar />
+              <FilterBar sorting={sorting} />
             </header>
 
             <div className="notes-wrapper">

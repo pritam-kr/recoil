@@ -1,0 +1,11 @@
+.reminder-box{
+    
+}
+
+.input-time, .input-date{
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: .3rem;
+    outline: none;
+}

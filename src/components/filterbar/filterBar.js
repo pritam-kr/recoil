@@ -3,20 +3,32 @@ import "./filterBar.css";
 import * as BsIcons from "react-icons/bs";
 import * as FaIcons from "react-icons/io";
 import { colors } from "../../utils";
+import { selector, useRecoilValue, useSetRecoilState } from "recoil";
+import { allNoteAtom } from "../../recoil/atoms/allNoteAtom";
 
-const FilterBar = () => {
+ 
+
+const FilterBar = ({sorting}) => {
   const [colorPalette, showColorPalette] = useState(false);
 
   const colorPaletteHandler = () => {
     showColorPalette(!colorPalette);
   };
 
+  const filterHandler = (key) => {
+   
+    sorting(key)
+  };
+
   return (
     <div className="filter-wrapper">
       <div className="filter-left-side">
-        <select className="filter-latest-old">
-            <option value="latest">Latest</option>
-            <option value="old">Old</option>
+        <select
+          className="filter-latest-old"
+          onChange={(event) => filterHandler(event.target.value)}
+        >
+          <option value="latest">Latest</option>
+          <option value="old">Old</option>
         </select>
       </div>
       <div className="filter-right-side">

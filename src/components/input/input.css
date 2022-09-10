@@ -4,6 +4,7 @@
   border: 1px solid var(--border-color);
   border-radius: 1rem;
   max-width: 600px;
+  
    
 }
 .input-title,
@@ -35,11 +36,10 @@
 
 .input-icons-wrapper {
   position: relative;
+  display: flex;
+  gap: .5rem;
 }
-.timer-icon{
-    margin-left: .5rem;
-}
-
+ 
 
 .expand{
   display: none;
@@ -49,4 +49,12 @@
 
 .active-expand{
   height: auto;
+}
+
+.timer-icon-wrapper{
+  position: relative;
+}
+
+.color-palette-wrapper{
+  position: relative;
 }

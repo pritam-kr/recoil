@@ -5,11 +5,13 @@ import { Colors } from "../colorPallet/colors";
 import { createNewNoteService } from "../../services/getNotes";
 import { useRecoilState } from "recoil";
 import { allNoteAtom, loadingStatusAtom } from "../../recoil/atoms/allNoteAtom";
+import { Reminder } from "../reminder/reminder";
 
 const Input = () => {
   const [colorPalette, showColorPalette] = useState(false);
   const [loadingState, setLoadingState] = useRecoilState(loadingStatusAtom);
   const [notes, setNotes] = useRecoilState(allNoteAtom);
+  const [reminder, showReminder] = useState(false);
 
   const [expand, setExpand] = useState(false);
 
@@ -25,6 +27,7 @@ const Input = () => {
     title: "",
     description: "",
     color: "",
+    reminder: { time: "", date: "" },
   });
 
   const createNewNote = async () => {
@@ -90,20 +93,33 @@ const Input = () => {
       </div>
       <div className="add-btn-wrapper">
         <div className="input-icons-wrapper">
-          <FaIcons.IoMdColorPalette
-            className="icons input-icons"
-            onClick={() => showColorPalette(!colorPalette)}
-          />
-
-          <FaIcons.IoIosTimer className="icons input-icons timer-icon" />
-          <FaIcons.IoIosSave className="icons input-icons timer-icon" />
-
-          {colorPalette && (
-            <Colors
-              setFormData={setFormData}
-              showColorPalette={showColorPalette}
+          <div className="color-palette-wrapper">
+            <FaIcons.IoMdColorPalette
+              className="icons input-icons"
+              onClick={() => showColorPalette(!colorPalette)}
             />
-          )}
+             {colorPalette && (
+              <Colors
+                setFormData={setFormData}
+                showColorPalette={showColorPalette}
+              />
+            )}
+          </div>
+
+          <div>
+            <FaIcons.IoIosTimer
+              className="icons input-icons timer-icon"
+              onClick={() => showReminder(!reminder)}
+            />
+          </div>
+
+          <div >
+            <FaIcons.IoIosSave className="icons input-icons timer-icon" />
+
+           
+          </div>
+
+          <div>{reminder && <Reminder setFormData={setFormData} />}</div>
         </div>{" "}
         {loadingState.loading ? (
           <button className="btn btn-primary">Loading..</button>
